@@ -1,0 +1,873 @@
+/* Full of the page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+/* Header styles */
+header {
+  background-color: rgb(0, 0, 0);
+  display: flex; /*It helps to arrange things nicely*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.menu-icon {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer; /*It means:"You can click this!"*/
+}
+
+/* Sidebar Fullscreen Menu */
+.menu-overlay {
+  display: none; /*It hides the element */
+  position: fixed; /*It's not move when the page moves.*/
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999; /*i want the sidebar to stay on top of everything . so we can use this*/
+  background-color: black;
+  overflow: hidden; /*It hides anything that goes outside the area.*/
+}
+
+.menu-image {
+  position: relative; /*It moves something a little bit from its normal place.*/
+  width: 100%;
+  height: 100%;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*Makes the picture fill the space and look nice.*/
+  opacity: 0.9;
+}
+
+.menu-links {
+  position: absolute; /*It puts the item anywhere you want on the page.*/
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%); /*Used to center things verticall*/
+  display: flex; /*things are nicly side by side or in order.*/
+  flex-direction: column; /*arrange things up to down.*/
+  gap: 1.5rem;
+}
+
+.menu-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease; /*Change color slowly, not suddenly*/
+}
+
+.menu-links a:hover {
+  color: red;
+}
+
+.close-button {   /*close btn of the slidebar*/
+  position: absolute; /*It puts the item anywhere you want on the page.*/
+  top: 20px;
+  right: 20px;
+  background: white;
+  color: black;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10; /*thing shows on top of others*/
+  border-radius: 4px;
+  padding: 5px 12px;
+}
+
+/* Home Section */
+.home {
+  background-image: url("main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /*arrange things up to down.*/
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative; /*It moves something a little bit from its normal place.*/
+}
+
+/* Book Now button */
+.home-button {
+  position: absolute; /*It puts the item anywhere you want on the page.*/
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(138, 2, 2);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease; /*background color change slowly in 0.3 seconds.*/
+}
+
+.home-button:hover {
+  background-color: rgb(36, 2, 2);
+}
+
+
+
+/* Hero Section (in the home page) */
+.hero-section {
+  background-image: url('seco.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /*arrange things up to down.*/
+  justify-content: center;
+  align-items: flex-start; /*It puts things at the top inside a box.*/
+  padding-left: 10%;
+  color: white;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 500px; /* The box can be any size but not bigger than 500 pixels wide.*/
+}
+
+.hero-content p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.view-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer; /*It means:"You can click this!"*/
+  transition: all 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+/* image text section 1 (in the home page) */
+.image-text-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-side {
+  flex: 1; /*Box gets big and fills space (Flex means to stretch or shrink a box to fit space nicely.)*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /*hides anything that goes outside the box.*/
+}
+
+.image-side img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  background-color: black; 
+  color: #fff; 
+}
+
+.text-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-side p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+
+/*image text section 2*/
+.image-text-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  background-color: #fff;
+  color: #000;
+}
+
+.text-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-side p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/*slides (New offers in 2025) */
+#slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  perspective: 1000px; /*makes things look 3D and deeper when you rotate them*/
+  padding: 50px 0;
+}
+
+#slider-section .carousel {
+  width: 300px;
+  height: 300px;
+  position: relative; /*It moves something a little bit from its normal place.*/
+  transform-style: preserve-3d; /*keeps the 3D look of things when you move or rotate things.*/
+  animation: rotate 20s linear infinite; /*It makes something (forewer) around slowly */
+}
+
+#slider-section .carousel img {
+  position: absolute; /*It puts the item anywhere you want on the page.*/
+  width: 200px;
+  height: 280px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /*Moves box half left and half up to center it.*/
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /*It adds a shadow below the box to make it look like it’s floating.*/
+  border-radius: 10px;
+}
+
+#slider-section .carousel img:nth-child(1)  { transform: rotateY(0deg)   translateZ(400px); }
+#slider-section .carousel img:nth-child(2)  { transform: rotateY(45deg)  translateZ(400px); }
+#slider-section .carousel img:nth-child(3)  { transform: rotateY(90deg)  translateZ(400px); }
+#slider-section .carousel img:nth-child(4)  { transform: rotateY(135deg) translateZ(400px); }
+#slider-section .carousel img:nth-child(5)  { transform: rotateY(180deg) translateZ(400px); }
+#slider-section .carousel img:nth-child(6)  { transform: rotateY(225deg) translateZ(400px); }
+#slider-section .carousel img:nth-child(7)  { transform: rotateY(270deg) translateZ(400px); }
+#slider-section .carousel img:nth-child(8)  { transform: rotateY(315deg) translateZ(400px); } /*The first image faces straight (0deg).
+
+The second image is turned 45drg.
+
+The third 90deg, and so on…
+
+All images are placed equally spaced around a circle.
+
+This makes the images appear arranged in a spinning 3D carousel!*/
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg); /*To rotate from 0deg to 360deg*/
+  }
+}
+/*End of the Home Page styling */
+
+/* Start of the Story Page*/
+/*book of the Story Part*/
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap'); /*It adds a cool font to your website from the internet */
+*, /*Select everything on the page*/
+*::before, /*Adds something before*/
+*::after /*Adds something before*/{
+  margin: 0;
+	padding: 0;
+  box-sizing: border-box; /*Keeps the box size the same, even with padding or border.*/
+}
+body {
+	height: 100vh;
+	background: url("./room.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.book-content {
+	position: absolute; /*It puts the item anywhere you want on the page.*/
+	top: 52%;
+	left: 35%;
+	width: 330px;
+	height: 467px;
+	background: #C8AA94;
+  box-shadow: inset 600px 0 50px #000000cc, 0 20px 100px #000000e6;
+  transform-style: preserve-3d; /*It helps things stay 3D inside a book*/
+	transform: translate(-50%,-50%) perspective(2000px); /*Moves the box half left and half up to center it and gives it a 3D depth*/
+	transition: 2s cubic-bezier(0, 0, .3, .88); /*makes things change slowly and smoothly in 2 seconds.*/
+}
+.book-content:hover /* When you move your mouse over the book content, this style will happen.*/{
+	transform: translate(-50%,-50%) perspective(2000px);
+	box-shadow: inset 20px 0 50px #000000cc, 0 10px 100px #000000e6;
+}
+.book-content:before {
+	content: '';
+	position: absolute; /*It puts the item anywhere you want on the page.*/
+  width: 101%;
+	height: 7px;
+	top: -6px;
+	left: 0;
+	background: #3B2E26;
+	transform-origin: bottom; /*object will rotate or move around its bottom edge.*/
+	transform: skewX(-45deg); /*tilts the box sideways to the left by 45 degrees.*/
+  border-top-right-radius: 5px;
+}
+.book-content:after {
+	content: '';
+	position: absolute;
+  width: 7px;
+	height: 100.5%;
+	top: 0;
+	right: -7px;
+	background: #3B2E26;
+	transform-origin: left; /*When open*/
+	transform: skewY(-45deg);
+}
+.book-cover {
+  position: relative; /*It moves something a little bit from its normal place.*/
+	width: 100%;
+	height: 100%;
+	transform-origin: left; /*makes the object turn or move around its left side.*/
+	transition: 2s cubic-bezier(0, 0, .3, .88); /*It makes the change happen slowly over 2 seconds.*/
+  background: url(coverpg.jpg);
+  background-size: cover;
+  z-index: 1; /*thing shows on top of others*/
+}
+.book-content:hover .book-cover {
+	transform: rotateY(-135deg); /*turns the book sideways to the left by 135 degrees.*/
+}
+.book-page {
+	position: absolute;
+  width: 100%;
+  height: 100%;
+	top: 0;
+	left: 0;
+  padding: 20px;
+  border-left: 7px solid #3B2E26;
+  border-bottom: 5px solid #3B2E26;
+  font-family: 'MedievalSharp', cursive;
+}
+.book-page h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #020202;
+
+}
+.book-page p {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+/* text section 1 */
+.image-text-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.text-side {
+  flex: 1; /*Box gets big and fills space.*/
+  display: flex;
+  flex-direction: column; /*It puts things one below the other.*/
+  justify-content: center;
+  padding: 50px;
+  background-color: black;
+  color: #fff; 
+}
+
+.text-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-side p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/*image text section 2*/
+.image-text-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /*hides anything that goes outside the box.*/
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  background-color: #fff;
+  color: #000;
+}
+
+.text-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-side p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+/* End OF The Story Page*/
+
+/*Star of the Team Page*/
+/* Text Part */
+.team-section {
+  display: flex; /*It puts items in a line side by side.*/
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* for fill the screen */
+  text-align: center;
+}
+
+.team-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.team-section p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px; 
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+/* Team Members Slides */
+#team-section {
+  padding: 50px 0;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+#team-section .team-slider {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  height: 300%;
+  max-width: 1000px;
+}
+
+#team-section input[type="radio"] {
+  display: none;
+}
+
+#team-section .member {
+  flex: 1; /*It puts items in a line side by side.*/
+  overflow: hidden;
+  transition: flex 0.5s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+#team-section .member img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+#team-section .member p {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Expanded team member logic */
+#team-section #member1:checked ~ #m1, /*If you click a team member → their card grows. Others stay small.*/
+#team-section #member2:checked ~ #m2,
+#team-section #member3:checked ~ #m3,
+#team-section #member4:checked ~ #m4,
+#team-section #member5:checked ~ #m5,
+#team-section #member6:checked ~ #m6,
+#team-section #member7:checked ~ #m7 {
+  flex: 3;
+}
+
+#team-section #member1:checked ~ #m1 img,
+#team-section #member2:checked ~ #m2 img,
+#team-section #member3:checked ~ #m3 img,
+#team-section #member4:checked ~ #m4 img,
+#team-section #member5:checked ~ #m5 img, /*When you select (click) a team member, their image gets a little bigger.*/
+#team-section #member6:checked ~ #m6 img,
+#team-section #member7:checked ~ #m7 img {
+  transform: scale(1.05); /*It makes the item a little bigger (5% bigger).*/
+}
+/*End of the Team Page*/
+
+/*Start of the Service Page*/
+.scroll-animate-section .wrapper /*It styles the inside part of the scroll section.*/{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-animate-section .items {
+  width: 130%;
+  display: flex; /*puts boxes side by side.*/
+  flex-wrap: wrap; /*If space is full, things go down to the next line*/
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg); /* Move the box to center and turn it 45 degrees.*/
+}
+
+.scroll-animate-section .item {
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.scroll-animate-section .item:hover {
+  transform: scale(1.05); /*Makes the box a little bigger */
+}
+
+.scroll-animate-section .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.4);
+}
+
+.scroll-animate-section .overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0,0,0,0.6);
+  width: 100vw;
+  height: 0vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: clamp(3rem, 8vw, 10rem);
+  overflow: hidden;
+}
+
+.scroll-animate-section .overlay h1 {
+  transform: scale(0); /*It makes the box disappear by shrinking it to zero size.*/
+}
+
+
+
+/* Flip Card Services */
+/* Slide Numbers */
+.slide .photo::before {
+  content: '';
+  position: absolute;
+  color: #fff;
+  transform: rotate(-90deg);
+  top: 40px;
+  left: -60px;
+}
+
+.slide:nth-child(1) .photo::before {
+  content: '01 _____ 05';
+}
+.slide:nth-child(2) .photo::before {
+  content: '02 _____ 05';
+}
+.slide:nth-child(3) .photo::before {
+  content: '03 _____ 05';
+}
+.slide:nth-child(4) .photo::before {
+  content: '04 _____ 05';
+}
+.slide:nth-child(5) .photo::before {
+  content: '05 _____ 05';
+}
+.slide:nth-child(6) .photo::before {
+  content: '06 _____ 08';
+}
+.slide:nth-child(7) .photo::before {
+  content: '07 _____ 08';
+}
+.slide:nth-child(8) .photo::before {
+  content: '08 _____ 08';
+} /*First photo says “01 _____ 05” (means photo 1 of 5)
+
+Second photo says “02 _____ 05” (means photo 2 of 5)*/
+
+
+.slider:active {
+  cursor: grabbing; /*When you click and hold, the mouse looks like a hand grabbing.*/
+}
+
+.slider:active .slide {
+  transform: scale(0.9); /*Makes the box a bit smaller than normal.*/
+  margin: 0 0;
+}
+
+.slider:active .slide .text {
+  transform: translateX(-40%); /*The text inside the slides moves to the left by 40%.*/
+}
+
+
+.slider {
+  transition: transform 0.3s ease-out; /* for smooth */
+}
+
+
+.flip-card-container {
+  display: flex; /*puts boxes side by side.*/
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 350px;
+  perspective: 1000px; /*Makes things look 3D*/
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s; /*smooth , takes 0.8 seconds.*/
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /*When you hover over the card, it flips around to show the back side.*/
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background: #000000;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+/*End of the Service Page*/
+
+/*Start of the Appoinment Page*/
+/*make appoinment in PHP*/
+.appointment-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  background:rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+.appointment-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.appointment-form form input,
+.appointment-form button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.appointment-form h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+.address-group {
+  display: flex;
+  gap: 10px;
+}
+.address-group input {
+  flex: 1;
+}
+.appointment-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.appointment-form button:hover {
+  background: #0056b3;
+}
+.message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/*contact us*/
+/*This section will develop in the next 2 month . It's not compleat yet*/
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('interior-5413351_1280.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; 
+  font-family: Arial, sans-serif;
+}
+
+
+.contact-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.contact-card {
+  flex: 1 1 250px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #910101;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card i {
+  font-size: 30px;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.contact-card h4 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.contact-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*End of the Contact Part*/
+/*Actcualy this part must be develop. this is the small start for the contact page and it's note conect with contact page Yet.*/
+
+
+
+
+
+

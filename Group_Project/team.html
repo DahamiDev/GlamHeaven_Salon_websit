@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salon Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="lo.png" alt="" class="logo" />
+    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+  </header>
+
+  <!-- Sidebar Menu -->
+  <div class="menu-overlay" id="sidebar">
+    <button class="close-button" onclick="toggleMenu()">×</button>
+    <div class="menu-image">
+      <img src="menu1.jpg" alt="Sidebar Background" />
+      <div class="menu-links">
+        <a href="index.html">HOME</a>
+        <a href="story.html">OUR STORY</a>
+        <a href="team.html">OUR TEAM</a>
+        <a href="service.html">OUR SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+        <br><br><br><br>
+        <a href="login.html">LOGING</a>
+      </div>
+    </div>
+  </div>
+<body>
+   
+<!--team ....-->
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <img src="teampic.jpg" alt="Centered Image">
+</div>
+<br>
+<br>
+<!--text ...-->
+<section class="team-section">
+   
+   
+    <p>
+        Our team is a dedicated group of professionals who work together to provide exceptional service to our clients. Each member brings a unique skill set and perspective, ensuring that we are able to tackle any challenge that comes our way. We are passionate about what we do, and we strive to create a supportive and collaborative environment. Our collective goal is to achieve excellence in everything we do, and we believe that the success of our team is directly tied to the success of our clients.
+        Our team is a dedicated group of professionals who work together to provide exceptional service to our clients. Each member brings a unique skill set and perspective, ensuring that we are able to tackle any challenge that comes our way. We are passionate about what we do, and we strive to create a supportive and collaborative environment. Our collective goal is to achieve excellence in everything we do, and we believe that the success of our team is directly tied to the success of our clients.
+        Our team is a dedicated group of professionals who work together to provide exceptional service to our clients. Each member brings a unique skill set and perspective, ensuring that we are able to tackle any challenge that comes our way. We are passionate about what we do, and we strive to create a supportive and collaborative environment. Our collective goal is to achieve excellence in everything we do, and we believe that the success of our team is directly tied to the success of our clients.
+        Our team is a dedicated group of professionals who work together to provide exceptional service to our clients. Each member brings a unique skill set and perspective, ensuring that we are able to tackle any challenge that comes our way. We are passionate about what we do, and we strive to create a supportive and collaborative environment. Our collective goal is to achieve excellence in everything we do, and we believe that the success of our team is directly tied to the success of our clients.
+    </p>
+</section>
+<br>
+<br>
+
+
+<!-- Team Members Slide -->
+<div id="team-section">
+    <div class="team-slider">
+      <input type="radio" name="member" id="member1" checked>
+      <input type="radio" name="member" id="member2">
+      <input type="radio" name="member" id="member3">
+      <input type="radio" name="member" id="member4">
+      <input type="radio" name="member" id="member5">
+      <input type="radio" name="member" id="member6">
+      <input type="radio" name="member" id="member7"> <!--This like a radio Boutton. These are buttons to choose team members.
+
+There are 7 team members.
+
+The first one is selected at the start.
+
+Used to show one member at a time.-->
+  
+      <div class="member" id="m1">
+        <label for="member1">
+          <img src="mem1.jpg" alt="Team Member 1">
+          <p>Member 1</p>
+        </label>
+      </div>
+      <div class="member" id="m2">
+        <label for="member2">
+          <img src="mem8.jpg" alt="Team Member 2">
+          <p>Member 2</p>
+        </label>
+      </div>
+      <div class="member" id="m3">
+        <label for="member3">
+          <img src="mem7.jpg" alt="Team Member 3">
+          <p>Member 3</p>
+        </label>
+      </div>
+      <div class="member" id="m4">
+        <label for="member4">
+          <img src="mem6.jpg" alt="Team Member 4">
+          <p>Member 4</p>
+        </label>
+      </div>
+      <div class="member" id="m5">
+        <label for="member5">
+          <img src="mem3.jpg" alt="Team Member 5">
+          <p>Member 5</p>
+        </label>
+      </div>
+      <div class="member" id="m6">
+        <label for="member6">
+          <img src="mem9.jpg" alt="Team Member 6">
+          <p>Member 6</p>
+        </label>
+      </div>
+      <div class="member" id="m7">
+        <label for="member7">
+          <img src="mem4.jpg" alt="Team Member 7">
+          <p>Member 7</p>
+        </label>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  <!-- Footer -->
+<footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif; text-align: center;">
+    <div style="margin-bottom: 20px;">
+      <div style="text-align: center;">
+        <img src="lo.png" alt="Logo" style="height: 50px; margin-bottom: 10px;" />
+        <p style="font-size: 1rem; color: #ccc;">Your Beauty, Our Passion</p>
+      </div>
+    </div>
+  
+    <div>
+      <p style="font-size: 0.9rem; color: #888;">2025 our Glam Heven. Your Beauty, Our Passion.</p>
+    </div>
+  </footer>
+  
+
+  
+    <script>
+      function toggleMenu() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+      }
+    </script>
+  
+  </body>
+  </html>

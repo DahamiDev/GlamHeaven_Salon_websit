@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salon Website</title>
+  <link rel="stylesheet" href="style.css" />
+  
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="lo.png" alt="" class="logo" />
+    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+  </header>
+
+  <!-- Sidebar Menu -->
+  <div class="menu-overlay" id="sidebar">
+    <button class="close-button" onclick="toggleMenu()">×</button>
+    <div class="menu-image">
+      <img src="menu1.jpg" alt="Sidebar Background" />
+      <div class="menu-links">
+        <a href="index.html">HOME</a>
+        <a href="story.html">OUR STORY</a>
+        <a href="team.html">OUR TEAM</a>
+        <a href="service.html">OUR SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+        <br><br><br><br>
+        <a href="login.html">LOGING</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Booking Section  in the book -->
+  <article class="book-content">
+    <div class="book-cover"></div>
+    <div class="book-page">
+      <h1>Be wise while counting</h1>
+      <p>
+        Glam Heven was founded in 1980 with the goal of providing a welcoming space for beauty and self-care. What began as a small, local salon has grown into a trusted name in the community. Over the years, we’ve expanded our services and team, always prioritizing quality and personal care. We’re proud to continue serving our clients, helping them look and feel their best.       
+      </p>
+    </div>
+  </article>
+</body>
+
+  <!-- Welcome Section -->
+  <section class="image-text-section">
+    <div class="image-side">
+    </div>
+    <div class="text-side">
+      <h2>Welcome to Our Salon</h2>
+      <p>
+        Experience the ultimate pampering in our modern salon.<br>
+        From haircuts to spa treatments, we’ve got everything<br>
+        to make you feel refreshed and fabulous.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="image-text-section reverse">
+    <div class="text-side">
+      <h2>Your Beauty, Our Passion</h2>
+      <p>
+        At Glam Salon, we’ve always believed that beauty isn’t just about appearance; 
+        <br>it’s about how you feel. Founded in 1980, our salon was created with one goal <br>
+        in mind: to offer a relaxing space where everyone could look and feel their best. From a small,<br>
+        cozy start to a well-loved neighborhood spot, we’ve built a reputation for exceptional service and a <br>
+      </p>
+    </div>
+    <div class="image-side">
+      <img src="colorgirl.jpg" alt="Salon Image">
+    </div>
+  </section>
+
+  <!-- Footer --> <!-- footer has inline css-->
+  <footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif; text-align: center;">
+    <div style="margin-bottom: 20px;">
+      <div style="text-align: center;">
+        <img src="lo.png" alt="Logo" style="height: 50px; margin-bottom: 10px;" />
+        <p style="font-size: 1rem; color: #ccc;">Your Beauty, Our Passion</p>
+      </div>
+    </div>
+    <div>
+      <p style="font-size: 0.9rem; color: #888;">2025 our Glam Heven. Your Beauty, Our Passion.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

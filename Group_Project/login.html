@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('set.jpg'); 
+      background-size: cover;
+      background-position: center;
+        background-repeat: no-repeat; 
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 50px;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      display: inline-block;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      color: white;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Login Page</h2>
+
+  <!-- Login Form -->
+  <form onsubmit="return checkLogin()">
+    
+    <!-- Username Field -->
+    <label>
+      Username:
+      <input type="text" id="username" required>
+    </label>
+    
+    <!-- Password Field -->
+    <label>
+      Password:
+      <input type="password" id="password" required>
+    </label>
+    
+    <!-- Submit Button -->
+    <input type="submit" value="Login">
+  </form>
+
+  <!-- JavaScript to check login -->
+  <script>
+    function checkLogin() {
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+
+      if (user === "user" && pass === "user1234") {
+        alert("Login successful!");
+        window.location.href = "booking.html";
+        return false;
+      } else {
+        alert("Invalid!");
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>

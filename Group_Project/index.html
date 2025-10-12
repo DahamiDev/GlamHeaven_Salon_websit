@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salon Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="lo.png" alt="" class="logo" />  <!--A logo image.-->
+    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span> <!--A menu iconthat can be clicked to open or close the sidebar.-->
+  </header>
+
+  <!-- Sidebar Menu -->
+  <div class="menu-overlay" id="sidebar"> <!--Creates a sidebar menu.-->
+    <button class="close-button" onclick="toggleMenu()">×</button> <!--Includes a close button to hide the menu when clicked.-->
+    <div class="menu-image">
+      <img src="menu1.jpg" alt="Sidebar Background" />
+      <div class="menu-links">
+        <a href="index.html">HOME</a>
+        <a href="story.html">OUR STORY</a>
+        <a href="team.html">OUR TEAM</a>
+        <a href="service.html">OUR SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+        <br><br><br><br>
+        <a href="login.html">LOGING</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <a href="booking.html" class="home-button">Make Reservation</a>
+  </section><br><br>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <p>We believe in personalized<br>
+         service, high-quality products,<br>
+         and a new caring atmosphere<br>
+         where you can attract and<br>
+         indulge in self-care.</p>
+         <a href="story.html">
+          <button class="view-button">View</button>
+        </a>
+            </div>
+  </section>
+
+  <!--image text section 1-->
+  <section class="image-text-section">
+    <div class="image-side">
+      <img src="home1.jpg" width="250" height="400">
+    </div>
+    <div class="text-side">
+      <h2>Welcome to Our Salon</h2>
+      <p>
+        Experience the ultimate pampering in our modern salon.<br>
+        From haircuts to spa treatments, we’ve got everything<br>
+        to make you feel refreshed and fabulous.
+      </p>
+    </div>
+  </section>
+
+   <!--image text section 2-->
+   <section class="image-text-section reverse">
+    <div class="text-side">
+      <h2>Your Beauty, Our Passion</h2>
+      <p>
+        Discover a relaxing experience at our salon.<br>
+        We bring style and comfort together, just for you.<br>
+        Come in and enjoy the transformation!
+      </p>
+    </div>
+    <div class="image-side">
+      <img src="home2.jpg" alt="Salon Image">
+    </div>
+  </section>
+<br><br><br>
+
+  <!--New offers in 2025-->
+  <!--slides-->
+  <h1 style="text-align: center; font-size: 80px;">
+    <span style="color: red;">New</span> 
+    <span style="color: black;">Offers in 2</span>
+    <span style="color: red;">0</span>
+    <span style="color: black;">25</span>
+  </h1>
+  
+  
+  <div id="slider-section">
+    <div class="carousel">
+      <img src="offerpic1.jpg" alt="Image 1">
+      <img src="offerpic2.jpg" alt="Image 2">
+      <img src="offerpic3.jpg" alt="Image 3">
+      <img src="offerpic4.jpg" alt="Image 4">
+      <img src="offerpic5.jpg" alt="Image 5">
+      <img src="offerpic6.jpg" alt="Image 6">
+      <img src="offerpic7.jpg" alt="Image 7">
+      <img src="offerpic8.jpg" alt="Image 8">
+    </div>
+  </div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  <!-- Footer -->
+<footer style="background-color: #000; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif; text-align: center;">
+  <div style="margin-bottom: 20px;">
+    <div style="text-align: center;">
+      <img src="lo.png" alt="Logo" style="height: 50px; margin-bottom: 10px;" />
+      <p style="font-size: 1rem; color: #ccc;">Your Beauty, Our Passion</p>
+    </div>
+  </div>
+
+  <div>
+    <p style="font-size: 0.9rem; color: #888;"> 2025 Our Glam Heven. Your Beauty, Our Passion.</p>
+  </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

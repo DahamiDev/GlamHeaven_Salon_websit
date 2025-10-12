@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salon Appointment Booking</title>
+    <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+     max-width: 400px;
+    width: 100%;
+    background: rgb(16, 9, 9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #070505;
+    color: white;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      color: white;
+
+    }
+    input, select {
+        width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    }
+
+    input::placeholder,
+  select option {
+    color: #ccc;
+  }
+    button {
+      margin-top: 15px;
+      background: #ae0303;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #msg {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+      text-align: center;
+
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <form id="bookingForm">
+    <label for="name">Full Name:</label>
+    <input type="text" name="name" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" name="phone" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+
+    <label for="date">Appointment Date:</label>
+    <input type="date" name="date" required>
+
+    <label for="service">Select Service:</label>
+    <select name="service" required>
+      <option value="">Choose Service </option>
+      <option value="Haircut">Haircut</option>
+      <option value="Hair Color">Hair Color</option>
+      <option value="Facial">Facial</option>
+      <option value="Manicure">Manicure</option>
+    </select>
+
+    <button type="submit">Book Appointment</button>
+  </form>
+
+  <div id="msg"></div>
+
+  <script>
+    const form = document.getElementById('bookingForm'); /*Find the form and save it in a variable*/
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', e => { /*When the form is sent, do something.*/
+      e.preventDefault(); /*Don’t refresh the page.*/
+      const data = new FormData(form); /*Take the form’s info and save it*/
+      fetch('https://script.google.com/macros/s/AKfycbwKTC1uySP_kEzLM49dkSIE_6HPViwom0Y3z4cUuJjSSyKg6eUzUUSIRI_pWXoGJt4/exec', {
+        method: 'POST', /*a way to send info*/
+        body: data /*Send the saved form info*/
+      })
+      .then(res => res.text()) /*Get the response as text.*/
+      .then(response => { /*When response comes, do this*/
+        msg.innerHTML = " Appointment booked successfully!";
+        form.reset(); /*make it empty*/
+      })
+      .catch(err => { /*If there’s an error, do this*/
+        msg.innerHTML = " Something went wrong. Try again.";
+        console.error(err);
+      });
+    });
+  </script>
+
+
+
+</body>
+</html>
